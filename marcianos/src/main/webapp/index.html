@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Marte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link  href="formato.css" rel="stylesheet" type="text/css"/>
+          <script>
+            function mostrarMensaje(){
+            alert('La siguiente herramienta fue diseñada con el proposito de ayudar a los Marcianos');
+            }
+            function clicParrafo(){
+            document.getElementsByTagName('p')[0].onclick=mostrarMensaje;
+            }
+            window.onload=clicParrafo;
+        </script>
+    </head>
+   
+    <body>
+        <form action="eljsp.jsp" method="POST">
+        <div class="contenedor">
+            <h1>Ciudadanos de Marte  </h1>
+            <h3>Bienvenidos a su herramienta de conversion de valores </h3>
+            <label>Ingrese su valor: </label>
+            <input type="double" name="dato" placeholder="Valor a convertir">
+            <p> Selecciona el tipo de conversión que desee:  </p>
+            <select name="tipo">
+                <option value="Grados">Radianes a Grados</option>  
+                <option value="Radianes">Grados a Radianes</option>
+            </select>
+            <button  type="submit" value="Enviar"> <b><i></i></b>Enviar</button>
+            </p>
+            </div>
+        </form>
+    </body>
+</html>
+
